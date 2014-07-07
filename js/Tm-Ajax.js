@@ -5,7 +5,6 @@ function DatiRealtime(type)
 	this.Path = '';
 	this.RawData = getRawData;
     this.UpdateDiv = UpdateDivData;
-	this.UpdateGauge = UpdateGaugeData;
 }
 
 function UpdateDivData(UsrReq) {
