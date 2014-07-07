@@ -1,0 +1,85 @@
+#container {
+    background-color: #b9b9b9;
+    height: 768px;
+    width: 1024px;
+    position: relative;
+}
+#wind_dir_gauge {
+    background-color: yellow;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 81px;
+}
+#wind_speed_gauge {
+    background-color: orange;
+    height: 75px;
+    width: 150px;
+    position: absolute;
+    top: 223px;
+    left: 81px;
+}
+
+#Temp_MinMax {
+    position: absolute;
+    top: 8px;
+    left: 292px;
+}
+
+#Temp_Thermometer {
+    position: absolute;
+    top: 58px;
+    left: 292px;
+}
+
+#webcam {
+    background-color: pink;
+    height: 240px;
+    width: 320px;
+    position: absolute;
+    top: 58px;
+    left: 352;
+}
+
+#App_Temp_MinMax {
+    position: absolute;
+    top: 8px;
+    left: 682px;
+}
+
+#App_Temp_Thermometer {
+    position: absolute;
+    top: 58px;
+    left: 682px;
+}
+
+#Pressure_gauge {
+    background-color: yellow;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 792px;
+}
+#Humidity_gauge {
+    background-color: orange;
+    height: 75px;
+    width: 150px;
+    position: absolute;
+    top: 223px;
+    left: 792px;
+}
+
+.Square_MinMAx
+{
+width:50px;
+height:50px;
+background-color:blue;
+}
+
+.Thermometer {
+width:50px;
+height:240px;
+background-color:green;
+}
