@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 var Dati = new DatiRealtime('MeteoData');
-Dati.RawFile = './getraw.php';
+Dati.RawFile = './GetRaw.php';
 Dati.Path = 'meteodata.txt';
 
 
