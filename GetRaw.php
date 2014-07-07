@@ -3,7 +3,7 @@ $Request = $_POST['Req'];
 $Path = $_POST['Path'];
 
 $RawDataObj = array(
-		Station => null,
+		StationName => null,
 		Curr_DT => null,
 		Temp => null,
 		TMax => null,

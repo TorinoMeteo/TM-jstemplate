@@ -3,9 +3,11 @@
     height: 768px;
     width: 1024px;
     position: relative;
+	margin-left: auto;
+    margin-right: auto;
 }
 #wind_dir_gauge {
-    background-color: yellow;
+    background: url("../images/Wind.png");
     height: 150px;
     width: 150px;
     position: absolute;
@@ -17,13 +19,13 @@
     height: 75px;
     width: 150px;
     position: absolute;
-    top: 223px;
+    top: 200px;
     left: 81px;
 }
 
 #Temp_MinMax {
     position: absolute;
-    top: 8px;
+    top: 4px;
     left: 292px;
 }
 
@@ -33,18 +35,46 @@
     left: 292px;
 }
 
+#Header {
+    background-color: blue;
+    height: 50px;
+    width: 320px;
+    position: absolute;
+    top: 4px;
+    left: 352px;
+}
+#Current_Condition {
+    background-color: pink;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+#StationName {
+   background-color: white;
+    font-size: 20px;
+    height: 48px;
+    left: 51px;
+    line-height: 48px;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+    width: 268px;
+}
+
 #webcam {
     background-color: pink;
     height: 240px;
     width: 320px;
     position: absolute;
     top: 58px;
-    left: 352;
+    left: 352px;
 }
 
 #App_Temp_MinMax {
     position: absolute;
-    top: 8px;
+    top: 4px;
     left: 682px;
 }
 
@@ -67,9 +97,73 @@
     height: 75px;
     width: 150px;
     position: absolute;
-    top: 223px;
+    top: 200px;
     left: 792px;
 }
+
+#Temp_Graph {
+    background-color: orange;
+    height: 270px;
+    width: 340px;
+    position: absolute;
+    top: 480px;
+    left: 0px;
+}
+
+#Wind_Graph {
+    background-color: orange;
+    height: 270px;
+    width: 340px;
+    position: absolute;
+    top: 480px;
+    left: 342px;
+}
+
+#Rain_Graph {
+    background-color: orange;
+    height: 270px;
+    width: 340px;
+    position: absolute;
+    top: 480px;
+    left: 684px;
+}
+#DP {
+    position: absolute;
+    top: 304px;
+    left: 41px;
+}
+
+#Almanac {
+    background-color: yellow;
+    height: 170px;
+    width: 440px;
+    position: absolute;
+    top: 304px;
+    left: 292px;
+}
+
+#rain {
+    position: absolute;
+    top: 304px;
+    left: 762px;
+}
+
+#WindDir_num {
+    left: 55px;
+    position: absolute;
+    text-align: center;
+    top: 57px;
+    width: 40px;
+}
+
+#GustDir_num {
+    left: 55px;
+    position: absolute;
+    text-align: center;
+    top: 73px;
+    width: 40px;
+}
+
 
 .Square_MinMAx
 {
@@ -82,4 +176,14 @@ background-color:blue;
 width:50px;
 height:240px;
 background-color:green;
+}
+
+.Side_Box {
+    background-color: red;
+    height: 170px;
+    width: 220px;
+}
+
+.arrow {
+position:absolute;
 }
