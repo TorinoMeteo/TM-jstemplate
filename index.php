@@ -9,7 +9,7 @@
 <script type="text/javascript">
 var Dati = new DatiRealtime('MeteoData');
 Dati.RawFile = './GetRaw.php';
-Dati.Path = 'meteodata.dat';
+Dati.Path = 'MeteoData.dat';
 
 
 $( document ).ready(function() {
