@@ -14,7 +14,7 @@ Dati.Path = 'meteodata.dat';
 
 $( document ).ready(function() {
 
-	InitAll();
+	Dati.UpdateDiv('Curr_DT'); 
 
 });
 
