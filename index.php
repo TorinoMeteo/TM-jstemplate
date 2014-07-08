@@ -19,9 +19,6 @@ $( document ).ready(function() {
 	Dati.UpdateDiv('Curr_DT'); 
 	Dati.UpdateDiv('StationName'); 
 	$('#WindDir').rotate({ angle:0,animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
-
-
-
 });
 
 </script>
