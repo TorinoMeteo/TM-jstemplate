@@ -87,12 +87,10 @@ $( document ).ready(function() {
 <div id="Almanac"></div>
 
 <div id="Rain" class="Side_Box"></div>
-
+</div>
 <div id="Temp_Graph"></div>
 <div id="Wind_Graph"></div>
 <div id="Rain_Graph"></div>
-
-</div>
 <?PHP 
 include_once './include/footer.php';
 ?>

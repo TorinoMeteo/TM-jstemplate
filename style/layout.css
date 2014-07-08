@@ -118,6 +118,7 @@
     position: absolute;
     top: 480px;
     left: 342px;
+	display:none;
 }
 
 #Rain_Graph {
@@ -127,6 +128,7 @@
     position: absolute;
     top: 480px;
     left: 684px;
+	display:none;
 }
 #DP {
     position: absolute;
