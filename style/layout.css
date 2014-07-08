@@ -108,6 +108,7 @@
     position: absolute;
     top: 480px;
     left: 0px;
+	display:none;
 }
 
 #Wind_Graph {
