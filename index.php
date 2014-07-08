@@ -30,14 +30,14 @@ Dati.Path = 'MeteoData.dat';
     };
 })(jQuery);
 
-$( document ).ready(function('Temp_Graph') {
+$( document ).ready(function() {
 
 	Dati.UpdateDiv('Curr_DT'); 
 	Dati.UpdateDiv('StationName'); 
 	$('#WindDir').rotate({ animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
 	$('#WindGustDir').rotate({ animateTo:190,duration:8000 ,easing: $.easing.easeInOut });
 
-	$('#Temp_Thermometer').tclouds();
+	$('#Temp_Thermometer').tclouds('Temp_Graph');
 	
 	setInterval(function(){
 	$('#WindDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
