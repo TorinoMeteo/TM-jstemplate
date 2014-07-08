@@ -29,6 +29,7 @@ $( document ).ready(function() {
 <span id="Curr_DT"></span>
 <div id="container">
 <div id="eliminateo"></div>
+<div id="Manuel"></div>
 
 <div id="wind_dir_gauge">
 
