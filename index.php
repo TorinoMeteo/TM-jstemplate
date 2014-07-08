@@ -1,12 +1,8 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>TorinoMEteoLive Javascript template</title>
-<link href="./style/layout.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
- <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-<script type="text/javascript" src="./js/jQueryRotate.js"></script>
-<script type="text/javascript" src="./js/Tm-Ajax.js"></script>
+<?PHP 
+include_once './include/header.php';
+?>
+
+<body>
 
 <script type="text/javascript">
 var Dati = new DatiRealtime('MeteoData');
@@ -21,6 +17,11 @@ $( document ).ready(function() {
 	$('#WindDir').rotate({ animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
 	$('#WindGustDir').rotate({ animateTo:190,duration:8000 ,easing: $.easing.easeInOut });
 
+	$('#Temp_Thermometer').hover(
+		function() { $('#Temp_Graph').show(); },
+		function() { $('#Temp_Graph').hide(); }
+    );
+	
 	setInterval(function(){
 	$('#WindDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
 	$('#WindGustDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
@@ -30,8 +31,7 @@ $( document ).ready(function() {
 });
 
 </script>
-</head>
-<body>
+
 <span id="Curr_DT"></span>
 <div id="container">
 
@@ -76,6 +76,6 @@ $( document ).ready(function() {
 <div id="Rain_Graph"></div>
 
 </div>
-</body>
-
-</html>
+<?PHP 
+include_once './include/footer.php';
+?>
