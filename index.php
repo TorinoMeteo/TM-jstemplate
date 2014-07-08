@@ -28,12 +28,11 @@ $( document ).ready(function() {
 <body>
 <span id="Curr_DT"></span>
 <div id="container">
-<<<<<<< HEAD
-<div id="eliminateo"></div>
+
 <div id="Manuel"></div>
-=======
+
 <div id="ProvaTeo"></div>
->>>>>>> origin/master
+
 
 <div id="wind_dir_gauge">
 
