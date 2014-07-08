@@ -9,6 +9,26 @@ var Dati = new DatiRealtime('MeteoData');
 Dati.RawFile = './GetRaw.php';
 Dati.Path = 'MeteoData.dat';
 
+(function($) {
+    $.fn.tclouds = function() {    
+        var tcEl = this;    
+        $('body').append('<div id="Temp_Graph"/>');
+        $(document).mousemove(function(mTC){
+            $("#Temp_Graph").css({top:(mTC.pageY+15)+"px",left:(mTC.pageX+12)+"px"});
+        });
+        tcEl.each(function(){
+           var el = $(this);
+           var ti = el.attr('title');   
+           el.hover(function(){
+                $('#Temp_Graph').fadeTo(300, 1).html( ti );        
+                el.attr('title', '');
+            },function(){
+                $('#Temp_Graph').hide().html('');
+                el.attr('title', ti);
+            });
+        });
+    };
+})(jQuery);
 
 $( document ).ready(function() {
 
@@ -17,10 +37,12 @@ $( document ).ready(function() {
 	$('#WindDir').rotate({ animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
 	$('#WindGustDir').rotate({ animateTo:190,duration:8000 ,easing: $.easing.easeInOut });
 
-	$('#Temp_Thermometer').hover(
+	$('#nav a').tclouds();
+	
+/* 	$('#Temp_Thermometer').hover(
 		function() { $('#Temp_Graph').show(); },
 		function() { $('#Temp_Graph').hide(); }
-    );
+    ); */
 	
 	setInterval(function(){
 	$('#WindDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
