@@ -21,6 +21,11 @@ $( document ).ready(function() {
 	$('#WindDir').rotate({ animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
 	$('#WindGustDir').rotate({ animateTo:190,duration:8000 ,easing: $.easing.easeInOut });
 
+	setInterval(function(){
+	$('#WindDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
+	$('#WindGustDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
+	
+	}, 10000);
 
 });
 
