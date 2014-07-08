@@ -20,6 +20,7 @@ $( document ).ready(function() {
 	Dati.UpdateDiv('StationName'); 
 	$('#WindDir').rotate({ angle:0,animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
 	$('#WindGustDir').rotate({ angle:0,animateTo:268,duration:8000 ,easing: $.easing.easeInOut });
+	//testing Rotate
 
 });
 
