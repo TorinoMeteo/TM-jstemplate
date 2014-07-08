@@ -1,3 +1,5 @@
+
+// tracking div with fade
 (function($) {
     $.fn.TrackingEl = function(Elem) {    
         var tcEl = this;    
@@ -18,3 +20,9 @@
         });
     };
 })(jQuery);
+
+//rotate Image Function
+function RotateTo(Elem,Target)
+{
+$('#'+Elem).rotate({ animateTo:Target,duration:8000 ,easing: $.easing.easeInOut });
+}

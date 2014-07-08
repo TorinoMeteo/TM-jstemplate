@@ -15,14 +15,21 @@ $( document ).ready(function() {
 
 	Dati.UpdateDiv('Curr_DT'); 
 	Dati.UpdateDiv('StationName'); 
-	$('#WindDir').rotate({ animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
-	$('#WindGustDir').rotate({ animateTo:190,duration:8000 ,easing: $.easing.easeInOut });
-
+	RotateTo('WindDir',150);
+	RotateTo('WindGustDir',190);
+	
 	$('#Temp_Thermometer').TrackingEl('Temp_Graph');
+	$('#Rain').TrackingEl('Rain_Graph');
+	$('#wind_dir_gauge').TrackingEl('Wind_Graph');
+	
+	
+	
+	
 	
 	setInterval(function(){
-	$('#WindDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
-	$('#WindGustDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
+	RotateTo('WindDir',Math.floor((Math.random() * 360)));
+	RotateTo('WindGustDir',Math.floor((Math.random() * 360)));
+
 	
 	}, 10000);
 
