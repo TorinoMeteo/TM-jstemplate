@@ -14,7 +14,7 @@ Dati.Path = 'MeteoData.dat';
         var tcEl = this;    
         $('body').append('<div id="Temp_Graph"/>');
         $(document).mousemove(function(mTC){
-            $("#Temp_Graph").css({top:(mTC.pageY)+"px",left:(mTC.pageX)+"px"});
+            $("#Temp_Graph").css({top:(mTC.pageY+15)+"px",left:(mTC.pageX+15)+"px"});
         });
         tcEl.each(function(){
            var el = $(this);
