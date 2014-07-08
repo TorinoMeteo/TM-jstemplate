@@ -29,11 +29,6 @@ $( document ).ready(function() {
 <span id="Curr_DT"></span>
 <div id="container">
 
-<div id="Manuel"></div>
-
-<div id="ProvaTeo"></div>
-
-
 <div id="wind_dir_gauge">
 
 <img id="WindDir" class="arrow" src="./images/ArrowWind.png">
