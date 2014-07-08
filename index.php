@@ -10,7 +10,7 @@ Dati.RawFile = './GetRaw.php';
 Dati.Path = 'MeteoData.dat';
 
 (function($) {
-    $.fn.tclouds = function(Elem,) {    
+    $.fn.tclouds = function(Elem) {    
         var tcEl = this;    
         $('body').append('<div id="'+Elem+'"/>');
         $(document).mousemove(function(mTC){
