@@ -9,26 +9,7 @@ var Dati = new DatiRealtime('MeteoData');
 Dati.RawFile = './GetRaw.php';
 Dati.Path = 'MeteoData.dat';
 
-(function($) {
-    $.fn.tclouds = function(Elem) {    
-        var tcEl = this;    
-        $('body').append('<div id="'+Elem+'"/>');
-        $(document).mousemove(function(mTC){
-            $("#"+Elem).css({top:(mTC.pageY+15)+"px",left:(mTC.pageX+15)+"px"});
-        });
-        tcEl.each(function(){
-           var el = $(this);
-           var ti = el.attr('title');   
-           el.hover(function(){
-                $("#"+Elem).fadeTo(300, 1).html( ti );        
-                el.attr('title', '');
-            },function(){
-                $("#"+Elem).hide().html('');
-                el.attr('title', ti);
-            });
-        });
-    };
-})(jQuery);
+
 
 $( document ).ready(function() {
 
@@ -37,7 +18,7 @@ $( document ).ready(function() {
 	$('#WindDir').rotate({ animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
 	$('#WindGustDir').rotate({ animateTo:190,duration:8000 ,easing: $.easing.easeInOut });
 
-	$('#Temp_Thermometer').tclouds('Temp_Graph');
+	$('#Temp_Thermometer').TrackingEl('Temp_Graph');
 	
 	setInterval(function(){
 	$('#WindDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });

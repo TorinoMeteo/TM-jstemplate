@@ -6,6 +6,7 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 <script type="text/javascript" src="./js/jQueryRotate.js"></script>
+<script type="text/javascript" src="./js/Utils.js"></script>
 <script type="text/javascript" src="./js/Tm-Ajax.js"></script>
 
 
