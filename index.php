@@ -10,27 +10,27 @@ Dati.RawFile = './GetRaw.php';
 Dati.Path = 'MeteoData.dat';
 
 (function($) {
-    $.fn.tclouds = function() {    
+    $.fn.tclouds = function(Elem,) {    
         var tcEl = this;    
-        $('body').append('<div id="Temp_Graph"/>');
+        $('body').append('<div id="'+Elem+'"/>');
         $(document).mousemove(function(mTC){
-            $("#Temp_Graph").css({top:(mTC.pageY+15)+"px",left:(mTC.pageX+15)+"px"});
+            $("#"+Elem).css({top:(mTC.pageY+15)+"px",left:(mTC.pageX+15)+"px"});
         });
         tcEl.each(function(){
            var el = $(this);
            var ti = el.attr('title');   
            el.hover(function(){
-                $('#Temp_Graph').fadeTo(300, 1).html( ti );        
+                $("#"+Elem).fadeTo(300, 1).html( ti );        
                 el.attr('title', '');
             },function(){
-                $('#Temp_Graph').hide().html('');
+                $("#"+Elem).hide().html('');
                 el.attr('title', ti);
             });
         });
     };
 })(jQuery);
 
-$( document ).ready(function() {
+$( document ).ready(function('Temp_Graph') {
 
 	Dati.UpdateDiv('Curr_DT'); 
 	Dati.UpdateDiv('StationName'); 
