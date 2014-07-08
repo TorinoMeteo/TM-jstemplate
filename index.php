@@ -14,7 +14,7 @@ Dati.Path = 'MeteoData.dat';
         var tcEl = this;    
         $('body').append('<div id="Temp_Graph"/>');
         $(document).mousemove(function(mTC){
-            $("#Temp_Graph").css({top:(mTC.pageY+15)+"px",left:(mTC.pageX+12)+"px"});
+            $("#Temp_Graph").css({top:(mTC.pageY)+"px",left:(mTC.pageX)+"px"});
         });
         tcEl.each(function(){
            var el = $(this);
@@ -38,11 +38,6 @@ $( document ).ready(function() {
 	$('#WindGustDir').rotate({ animateTo:190,duration:8000 ,easing: $.easing.easeInOut });
 
 	$('#Temp_Thermometer').tclouds();
-	
-/* 	$('#Temp_Thermometer').hover(
-		function() { $('#Temp_Graph').show(); },
-		function() { $('#Temp_Graph').hide(); }
-    ); */
 	
 	setInterval(function(){
 	$('#WindDir').rotate({ animateTo:Math.floor((Math.random() * 360)),duration:8000 ,easing: $.easing.easeInOut });
