@@ -18,7 +18,10 @@ $( document ).ready(function() {
 
 	Dati.UpdateDiv('Curr_DT'); 
 	Dati.UpdateDiv('StationName'); 
-	$('#WindDir').rotate({ angle:0,animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
+	$('#WindDir').rotate({ animateTo:150,duration:8000 ,easing: $.easing.easeInOut });
+	$('#WindGustDir').rotate({ animateTo:190,duration:8000 ,easing: $.easing.easeInOut });
+
+
 });
 
 </script>
