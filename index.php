@@ -18,17 +18,18 @@ $( document ).ready(function() {
 	RotateTo('WindDir',150);
 	RotateTo('WindGustDir',190);
 	
-	$('#Temp_Thermometer').TrackingEl('Temp_Graph',15,-50);
-	$('#Rain').TrackingEl('Rain_Graph',-355,-285);
-	$('#wind_dir_gauge').TrackingEl('Wind_Graph',15,15);
-	
+	$('#Temp_Thermometer').TrackingEl('#Temp_Graph',15,-50);
+	$('#Rain').TrackingEl('#Rain_Graph',-355,-285);
+	$('#wind_dir_gauge').TrackingEl('#Wind_Graph',15,15);
+    SetThermometerValue('#Temp_Fill',22.5);
+	SetThermometerValue('#App_Temp_Fill',28.5);
 	
 	
 	
 	
 	setInterval(function(){
-	RotateTo('WindDir',Math.floor((Math.random() * 360)));
-	RotateTo('WindGustDir',Math.floor((Math.random() * 360)));
+	RotateTo('#WindDir',Math.floor((Math.random() * 360)));
+	RotateTo('#WindGustDir',Math.floor((Math.random() * 360)));
 
 	
 	}, 10000);
@@ -54,17 +55,35 @@ $( document ).ready(function() {
 
 <div id="wind_speed_gauge"></div>
 
-<div id="Temp_MinMax" class="Square_MinMAx"></div>
-<div id="Temp_Thermometer" class="Thermometer"></div>
+<div id="Temp_MinMax" class="Square_MinMAx">
+<div class="TriangleUp"></div>
+<div id="TMax" class="TValue">55°C</div>
+<div class="TriangleDown"></div>
+<div id="TMin" class="TValue">-55°C</div>
+</div>
+<div id="Temp_Thermometer" class="Thermometer">
+<div id="Temp_Fill"></div> 
+<img class="Thermoimages" src="./images/ThermoMeter.png">
+<div id="Temp" class="Tempvalue">45°C</div>
+</div>
 
 <div id="header">
-<div id="Current_Condition"></div>
+<div id="Current_Condition"><img src="<?= getFeed($WeatherPath) ?>"/></div>
 <div id="StationName"></div>
 </div>
 <div id="Webcam"><img height="240" width="320" alt="<?= $webcam_desc;?>" src="<?=$webcam_url ?>"/> </div>
 
-<div id="App_Temp_MinMax" class="Square_MinMAx"></div>
-<div id="App_Temp_Thermometer" class="Thermometer"></div>
+<div id="App_Temp_MinMax" class="Square_MinMAx">
+<div class="TriangleUp"></div>
+<div id="AppTMax" class="TValue">55°C</div>
+<div class="TriangleDown"></div>
+<div id="AppTMin" class="TValue">-55°C</div>
+</div>
+<div id="App_Temp_Thermometer" class="Thermometer">
+<div id="App_Temp_Fill"></div> 
+<img class="Thermoimages" src="./images/ThermoMeter.png">
+<div id="AppTemp" class="Tempvalue">45°C</div>
+</div>
 
 
 <div id="Pressure_gauge"></div>
