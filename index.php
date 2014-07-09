@@ -18,9 +18,9 @@ $( document ).ready(function() {
 	RotateTo('WindDir',150);
 	RotateTo('WindGustDir',190);
 	
-	$('#Temp_Thermometer').TrackingEl('Temp_Graph');
-	$('#Rain').TrackingEl('Rain_Graph');
-	$('#wind_dir_gauge').TrackingEl('Wind_Graph');
+	$('#Temp_Thermometer').TrackingEl('Temp_Graph',15,-50);
+	$('#Rain').TrackingEl('Rain_Graph',-355,-285);
+	$('#wind_dir_gauge').TrackingEl('Wind_Graph',15,15);
 	
 	
 	

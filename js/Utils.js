@@ -1,11 +1,11 @@
 
 // tracking div with fade
 (function($) {
-    $.fn.TrackingEl = function(Elem) {    
+    $.fn.TrackingEl = function(Elem,X,Y) {    
         var tcEl = this;    
         $('body').append('<div id="'+Elem+'"/>');
         $(document).mousemove(function(mTC){
-            $("#"+Elem).css({top:(mTC.pageY+15)+"px",left:(mTC.pageX+15)+"px"});
+            $("#"+Elem).css({top:(mTC.pageY+Y)+"px",left:(mTC.pageX+X)+"px"});
         });
         tcEl.each(function(){
            var el = $(this);
