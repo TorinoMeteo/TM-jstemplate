@@ -1,6 +1,6 @@
 <?PHP
 
-$webcam-url='./webcam/webcam.jpg';
-$webcam-desc='Webcam Torinometeo';
+$webcam_url='./webcam/webcam.jpg';
+$webcam_desc='Webcam Torinometeo';
 
 ?>

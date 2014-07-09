@@ -1,6 +1,5 @@
 <?PHP 
 include_once './include/header.php';
-include_once './include/config.php';
 ?>
 
 <body>
@@ -62,7 +61,7 @@ $( document ).ready(function() {
 <div id="Current_Condition"></div>
 <div id="StationName"></div>
 </div>
-<div id="Webcam"><img alt="<?= $webcam-desc ?>" src="<?= $webcam-url ?>"/></div>
+<div id="Webcam"><img height="240" width="320" alt="<?= $webcam_desc;?>" src="<?=$webcam_url ?>"/> </div>
 
 <div id="App_Temp_MinMax" class="Square_MinMAx"></div>
 <div id="App_Temp_Thermometer" class="Thermometer"></div>
