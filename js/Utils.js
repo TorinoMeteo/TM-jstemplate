@@ -1,7 +1,7 @@
 
 // tracking div with fade
 (function($) {
-    $.fn.TrackingEl = function(Elem,X,Y) {    
+    $.fn.TrackingEl = function(Elem,X,Y,func) {    
         var tcEl = this;    
         $('body').append('<div id="'+Elem+'"/>');
         $(document).mousemove(function(mTC){
@@ -13,6 +13,7 @@
            el.hover(function(){
                 $(Elem).fadeTo(300, 1).html( ti );        
                 el.attr('title', '');
+				func();
             },function(){
                 $(Elem).hide().html('');
                 el.attr('title', ti);
@@ -33,3 +34,5 @@ function SetThermometerValue(Elem,target)
 	$(Elem).jqxProgressBar({animationDuration:5000, layout: "reverse", orientation: 'vertical', value: ((target+40.0)*0.818+19.5), width: 50, height: 240 });
 
 }
+
+

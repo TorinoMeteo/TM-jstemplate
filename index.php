@@ -18,12 +18,12 @@ $( document ).ready(function() {
 	RotateTo('WindDir',150);
 	RotateTo('WindGustDir',190);
 	
-	$('#Temp_Thermometer').TrackingEl('#Temp_Graph',15,-50);
-	$('#Rain').TrackingEl('#Rain_Graph',-355,-285);
-	$('#wind_dir_gauge').TrackingEl('#Wind_Graph',15,15);
+	$('#Temp_Thermometer').TrackingEl('#Temp_Graph',15,-50,InitDivTempGraph);
+	$('#Rain').TrackingEl('#Rain_Graph',-355,-285,InitDivWindGraph);
+	$('#wind_dir_gauge').TrackingEl('#Wind_Graph',15,15,InitDivWindGraph);
     SetThermometerValue('#Temp_Fill',22.5);
 	SetThermometerValue('#App_Temp_Fill',28.5);
-	
+
 	
 	
 	
@@ -65,6 +65,19 @@ $( document ).ready(function() {
 <div id="Temp_Fill"></div> 
 <img class="Thermoimages" src="./images/ThermoMeter.png">
 <div id="Temp" class="Tempvalue">45°C</div>
+
+<div class="Thick">
+<div class="T10 T">50</div>
+<div class="T9 T">40</div>
+<div class="T8 T">30</div>
+<div class="T7 T">20</div>
+<div class="T6 T">10</div>
+<div class="T5 T">0</div>
+<div class="T4 T">-10</div>
+<div class="T3 T">-20</div>
+<div class="T2 T">-30</div>
+<div class="T1 T">-40</div>
+</div>
 </div>
 
 <div id="header">
@@ -83,6 +96,19 @@ $( document ).ready(function() {
 <div id="App_Temp_Fill"></div> 
 <img class="Thermoimages" src="./images/ThermoMeter.png">
 <div id="AppTemp" class="Tempvalue">45°C</div>
+
+<div class="Thick">
+<div class="T10 T">50</div>
+<div class="T9 T">40</div>
+<div class="T8 T">30</div>
+<div class="T7 T">20</div>
+<div class="T6 T">10</div>
+<div class="T5 T">0</div>
+<div class="T4 T">-10</div>
+<div class="T3 T">-20</div>
+<div class="T2 T">-30</div>
+<div class="T1 T">-40</div>
+</div>
 </div>
 
 
