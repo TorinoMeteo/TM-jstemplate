@@ -25,7 +25,7 @@ fclose ($file);
 $InData = explode("\n", str_replace(",",".",$output));
 
 foreach ($InData as $subarray) {
-	if($subarray !='!EOM')
+	if($subarray !='!EOM!')
 	{
 		$RowData = explode(";", $subarray);
 		$RawDataObj['HistMeanTemp']['Day'][] = $RowData[0];
