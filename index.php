@@ -10,7 +10,7 @@ Dati.RawFile = './GetRaw.php';
 Dati.Path = 'MeteoData.dat';
 
 var HistData = new DatiStorico('MonthData');
-Dati.RawFile = './GetRaw2.php';
+Dati.RawFile = './GetHistRaw.php';
 Dati.Path = 'NOAA/RAW-2014-07.txt';
 
 
