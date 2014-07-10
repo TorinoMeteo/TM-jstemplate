@@ -10,10 +10,8 @@ Dati.RawFile = './GetRaw.php';
 Dati.Path = 'MeteoData.dat';
 
 var HistData = new DatiStorico('MonthData');
-Dati.RawFile = './GetHistRaw.php';
-Dati.Path = 'NOAA/RAW-2014-07.txt';
-
-
+HistData.RawFile = './GetHistRaw.php';
+HistData.Path = './NOAA/RAW-2014-07.txt';
 
 $( document ).ready(function() {
 
@@ -27,15 +25,10 @@ $( document ).ready(function() {
 	$('#wind_dir_gauge').TrackingEl('#Wind_Graph',15,15,InitDivWindGraph);
     SetThermometerValue('#Temp_Fill',22.5);
 	SetThermometerValue('#App_Temp_Fill',28.5);
-
-	
-	
 	
 	setInterval(function(){
 	RotateTo('#WindDir',Math.floor((Math.random() * 360)));
 	RotateTo('#WindGustDir',Math.floor((Math.random() * 360)));
-
-	
 	}, 10000);
 
 });

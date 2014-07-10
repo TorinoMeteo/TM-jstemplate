@@ -1,7 +1,7 @@
 <?PHP
 $Request = $_POST['Req'];
-//$Path = $_POST['Path'];
-$Path="./NOAA/RAW-2014-07.txt";
+$Path = $_POST['Path'];
+
 $RawDataObj = array(
 		'HistMeanTemp' => array('Day'=>array(),'Data'=>array()),
 		'HistMaxTemp' => array('Day'=>array(),'Data'=>array(),'DTime'=>array()),
@@ -28,6 +28,8 @@ foreach ($InData as $subarray) {
 	if($subarray !='!EOM!')
 	{
 		$RowData = explode(";", $subarray);
+		if($RowData[1] != 'null')
+		{
 		//Day Value
 		$RawDataObj['HistMeanTemp']['Day'][] = $RowData[0];
 		$RawDataObj['HistMaxTemp']['Day'][] = $RowData[0];
@@ -55,6 +57,11 @@ foreach ($InData as $subarray) {
 		
 		//DDir Value
 		$RawDataObj['HistAvgWSpeed']['DDir'][] = $RowData[12];
+		}
+		else
+		{
+			break;
+		}
 	}
 	else
 	{

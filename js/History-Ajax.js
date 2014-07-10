@@ -29,14 +29,8 @@ function getRawDataStoria(UsrReq) {
         data: {'Req': UsrReq, 'Path': this.Path},              
         success: function (data)
 		{
-			if(data.indexOf('.')>0)
-			{
-			Output = parseFloat(data);
-			}
-			else
-			{
-			Output = parseInt(data);
-			}
+
+			Output = JSON.parse(data);
 			}
 		});
         return Output;
