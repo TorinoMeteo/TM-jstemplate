@@ -64,6 +64,10 @@ foreach ($InData as $subarray) {
 	
 }
 
+$indexedOnly = array();
+foreach ($$RawDataObj[$Request] as $row) {
+    $indexedOnly[] = array_values($row);
+}
+json_encode($indexedOnly);
 
-json_encode($RawDataObj[$Request]);
 ?>
