@@ -1,6 +1,5 @@
 <?PHP
-$Request = 'HistMeanTemp';
-//$Request = $_POST['Req'];
+$Request = $_POST['Req'];
 //$Path = $_POST['Path'];
 $Path="./NOAA/RAW-2014-07.txt";
 $RawDataObj = array(
@@ -63,17 +62,9 @@ foreach ($InData as $subarray) {
 	}
 	
 }
-?>
 
-
-<script type="text/javascript">
-<?PHP
-
-echo "var dati =". json_encode($RawDataObj[$Request]).";";
-
-alert("ciao");
+echo json_encode($RawDataObj[$Request]);
 
 ?>
-</script>
 
 
