@@ -1,4 +1,4 @@
-function DatiStoria(type)
+function DatiStorico(type)
 {
 	this.type = type;
 	this.RawFile = '';
