@@ -14,6 +14,7 @@
 <script type="text/javascript" src="./js/jQueryRotate.js"></script>
 <script type="text/javascript" src="./js/Utils.js"></script>
 <script type="text/javascript" src="./js/Tm-Ajax.js"></script>
+<script type="text/javascript" src="./js/History-Ajax.js"></script>
 <script type="text/javascript" src="./js/Graphs.js"></script>
 
 <?PHP 

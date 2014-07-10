@@ -3,11 +3,11 @@ function DatiStoria(type)
 	this.type = type;
 	this.RawFile = '';
 	this.Path = '';
-	this.RawData = getRawData;
-    this.UpdateDiv = UpdateDivData;
+	this.RawData = getRawDataStoria;
+    this.UpdateDiv = UpdateDivDataStoria;
 }
 
-function UpdateDivData(UsrReq) {
+function UpdateDivDataStoria(UsrReq) {
       $.ajax({
 	    async: true,
         method: 'post',                   
@@ -20,7 +20,7 @@ function UpdateDivData(UsrReq) {
 		});
    	}
 
-function getRawData(UsrReq) {
+function getRawDataStoria(UsrReq) {
 	var Output
       $.ajax({
 	    async: false,
