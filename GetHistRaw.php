@@ -21,7 +21,7 @@ $file = fopen($Path, "r");
 while(!feof($file)) { 
   $output = $output . fgets($file, 4096); 
 } 
-
+echo $output;
 fclose ($file); 
 
 
