@@ -4,6 +4,15 @@ include_once './include/header.php';
 
 <body>
 
+
+<script type="text/javascript">
+var Dati = new DatiStoria('Storia Mensile');
+Dati.RawFile = './GetRaw2.php';
+Dati.Path = 'NOAA/RAW-2014-07.txt';
+
+
+</script>
+
 <script type="text/javascript">
 var Dati = new DatiRealtime('MeteoData');
 Dati.RawFile = './GetRaw.php';
