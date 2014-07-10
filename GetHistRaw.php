@@ -13,7 +13,8 @@ $Raw'Data'Obj = array(
 		'HistAvgWSpeed' => array('Day'=>array(),'Data'=>array()),
 		'HistMaxWSpeed' => array('Day'=>array(),'Data'=>array(),'DTime'=>array(),'DDir'=>array())
 		);
-
+		echo "alive";
+/*
 $output=""; 
 $file = fopen($Path, "r"); 
 
@@ -26,7 +27,7 @@ fclose ($file);
 
 $'Data' = explode("\n", str_replace(",",".",$output));
 print_r($'Data');
-/* foreach ($'Data' as $line => $value) {
+foreach ($'Data' as $line => $value) {
 	$row = explode(";", $value);
 	print_r($row);
 } */
