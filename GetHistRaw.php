@@ -2,7 +2,7 @@
 //$Request = $_POST['Req'];
 //$Path = $_POST['Path'];
 
-$Path="NOAA/RAW-2014-07.txt"
+$Path="./NOAA/RAW-2014-07.txt"
 
 $RawDataObj = array(
 		HistMeanTemp => array(Day=>array(),Data=>array()),
