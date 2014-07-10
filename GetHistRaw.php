@@ -3,7 +3,7 @@
 //$Path = $_POST['Path'];
 $Path="./NOAA/RAW-2014-07.txt"
 
-$Raw'Data'Obj = array(
+$RawDataObj = array(
 
 		);
 
