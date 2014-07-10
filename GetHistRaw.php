@@ -1,8 +1,7 @@
 <?PHP
 //$Request = $_POST['Req'];
 //$Path = $_POST['Path'];
-echo "sono vivo";
-/* $Path="./NOAA/RAW-2014-07.txt"
+$Path="./NOAA/RAW-2014-07.txt"
 
 $RawDataObj = array(
 		HistMeanTemp => array(Day=>array(),Data=>array()),
@@ -14,7 +13,8 @@ $RawDataObj = array(
 		HistAvgWSpeed => array(Day=>array(),Data=>array()),
 		HistMaxWSpeed => array(Day=>array(),Data=>array(),DTime=>array(),DDir=>array())
 		);
-
+echo "sono vivo";
+/* 
 $output=""; 
 $file = fopen($Path, "r"); 
 
