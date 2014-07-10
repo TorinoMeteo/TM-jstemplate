@@ -26,10 +26,11 @@ fclose ($file);
 
 
 $data = explode("\n", str_replace(",",".",$output));
-foreach ($data as $line => $value) {
+print_r($data);
+/* foreach ($data as $line => $value) {
 	$row = explode(";", $value);
 	print_r($row);
-}
+} */
 
 
 ?>
