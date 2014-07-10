@@ -69,7 +69,7 @@ foreach ($InData as $subarray) {
 <script type="text/javascript">
 <?PHP
 
-echo var dati = json_encode($RawDataObj[$Request]);
+echo "var dati =". json_encode($RawDataObj[$Request]).";";
 
 alert("ciao");
 
