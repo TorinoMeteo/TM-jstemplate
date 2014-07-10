@@ -24,8 +24,8 @@ $( document ).ready(function() {
 
 	Dati.UpdateDiv('Curr_DT'); 
 	Dati.UpdateDiv('StationName'); 
-	RotateTo('WindDir',150);
-	RotateTo('WindGustDir',190);
+	RotateTo('#WindDir',150);
+	RotateTo('#WindGustDir',190);
 	
 	$('#Temp_Thermometer').TrackingEl('#Temp_Graph',15,-50,InitDivTempGraph);
 	$('#Rain').TrackingEl('#Rain_Graph',-355,-285,InitDivWindGraph);
