@@ -30,5 +30,4 @@ foreach ($InData as $line => $value) {
 	$row = explode(";", $value);
 	print_r($row);
 } 
-*/
 ?>
