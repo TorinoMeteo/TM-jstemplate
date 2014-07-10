@@ -13,6 +13,7 @@ $RawDataObj = array(
 		'HistAvgWSpeed' => array('Day'=>array(),'Data'=>array()),
 		'HistMaxWSpeed' => array('Day'=>array(),'Data'=>array(),'DTime'=>array(),'DDir'=>array()) */
 		);
+		echo "test";
 /*
 $output=""; 
 $file = fopen($Path, "r"); 
