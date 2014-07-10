@@ -63,8 +63,17 @@ foreach ($InData as $subarray) {
 	}
 	
 }
+?>
 
 
-echo json_encode($RawDataObj[$Request]);
+<script type="text/javascript">
+<?PHP
+
+echo var dati = json_encode($RawDataObj[$Request]);
+
+alert("ciao");
 
 ?>
+</script>
+
+
