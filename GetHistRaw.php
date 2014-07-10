@@ -1,4 +1,5 @@
 <?PHP
+$Request = 'HistMeanTemp';
 //$Request = $_POST['Req'];
 //$Path = $_POST['Path'];
 $Path="./NOAA/RAW-2014-07.txt";
@@ -51,7 +52,7 @@ foreach ($InData as $subarray) {
 		//DTime Value
 		$RawDataObj['HistMaxTemp']['DTime'][] = $RowData[3];
 		$RawDataObj['HistMinTemp']['DTime'][] = $RowData[5];
-		$RawDataObj['HistMaxWSpeed']['Data'][] = $RowData[11];
+		$RawDataObj['HistMaxWSpeed']['DTime'][] = $RowData[11];
 		
 		//DDir Value
 		$RawDataObj['HistAvgWSpeed']['DDir'][] = $RowData[12];
@@ -62,20 +63,7 @@ foreach ($InData as $subarray) {
 	}
 	
 }
-print_r($RawDataObj['HistMeanTemp']);
-echo "<br/>\n";
-print_r($RawDataObj['HistMaxTemp']);
-echo "<br/>\n";
-print_r($RawDataObj['HistMinTemp']);
-echo "<br/>\n";
-print_r($RawDataObj['HistHDD']);
-echo "<br/>\n";
-print_r($RawDataObj['HistCDD']);
-echo "<br/>\n";
-print_r($RawDataObj['HistRain']);
-echo "<br/>\n";
-print_r($RawDataObj['HistAvgWSpeed']);
-echo "<br/>\n";
-print_r($RawDataObj['HistMaxWSpeed']);
-echo "<br/>\n";
+
+
+json_encode($RawDataObj[$Request]);
 ?>
