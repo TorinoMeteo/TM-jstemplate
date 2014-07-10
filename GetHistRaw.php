@@ -2,7 +2,6 @@
 //$Request = $_POST['Req'];
 //$Path = $_POST['Path'];
 $Path="./NOAA/RAW-2014-07.txt";
-
 $RawDataObj = array(
 		'HistMeanTemp' => array('Day'=>array(),'Data'=>array()),
 		'HistMaxTemp' => array('Day'=>array(),'Data'=>array(),'DTime'=>array()),
@@ -20,11 +19,23 @@ $file = fopen($Path, "r");
 while(!feof($file)) { 
   $output = $output . fgets($file, 4096); 
 } 
-echo $output;
 fclose ($file); 
 
 
 $InData = explode("\n", str_replace(",",".",$output));
 print_r($InData);
+
+foreach ($InData as $subarray) {
+	if($subarray !='!EOM')
+	{
+		$RowData = explode(";", $subarray);
+		print_r($RowData);
+	}
+	else
+	{
+	 break;
+	}
+	
+}
 
 ?>
