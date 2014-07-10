@@ -62,5 +62,20 @@ foreach ($InData as $subarray) {
 	}
 	
 }
-var_dump($RawDataObj);
+print_r($RawDataObj['HistMeanTemp']);
+echo "<br/>\n";
+print_r($RawDataObj['HistMaxTemp']);
+echo "<br/>\n";
+print_r($RawDataObj['HistMinTemp']);
+echo "<br/>\n";
+print_r($RawDataObj['HistHDD']);
+echo "<br/>\n";
+print_r($RawDataObj['HistCDD']);
+echo "<br/>\n";
+print_r($RawDataObj['HistRain']);
+echo "<br/>\n";
+print_r($RawDataObj['HistAvgWSpeed']);
+echo "<br/>\n";
+print_r($RawDataObj['HistMaxWSpeed']);
+echo "<br/>\n";
 ?>
