@@ -24,10 +24,4 @@ echo $output;
 fclose ($file); 
 
 
-$InData = explode("\n", str_replace(",",".",$output));
-print_r($InData);
-foreach ($InData as $line => $value) {
-	$row = explode(";", $value);
-	print_r($row);
-} 
 ?>
