@@ -1,8 +1,8 @@
 <?PHP
 //$Request = $_POST['Req'];
 //$Path = $_POST['Path'];
-
-$Path="./NOAA/RAW-2014-07.txt"
+echo "sono vivo";
+/* $Path="./NOAA/RAW-2014-07.txt"
 
 $RawDataObj = array(
 		HistMeanTemp => array(Day=>array(),Data=>array()),
@@ -26,7 +26,7 @@ fclose ($file);
 
 
 $data = explode("\n", str_replace(",",".",$output));
-print_r($data);
+print_r($data); */
 /* foreach ($data as $line => $value) {
 	$row = explode(";", $value);
 	print_r($row);
