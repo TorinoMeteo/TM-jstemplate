@@ -4,7 +4,7 @@ function DatiStorico(type)
 	this.RawFile = '';
 	this.Path = '';
 	this.RawData = getRawDataStoria;
-    this.UpdateDiv = UpdateDivDataStoria;
+    	this.UpdateDiv = UpdateDivDataStoria;
 }
 
 function UpdateDivDataStoria(UsrReq) {

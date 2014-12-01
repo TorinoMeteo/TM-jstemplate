@@ -3,15 +3,14 @@ include_once './include/header.php';
 ?>
 
 <body>
-
 <script type="text/javascript">
 var Dati = new DatiRealtime('MeteoData');
 Dati.RawFile = './GetRaw.php';
 Dati.Path = 'MeteoData.dat';
 
-var HistData = new DatiStorico('MonthData');
-HistData.RawFile = './GetHistRaw.php';
-HistData.Path = './NOAA/RAW-2014-07.txt';
+var HistMonthData = new DatiStorico('MonthData');
+HistMonthData.RawFile = './GetHistRaw.php';
+HistMonthData.Path = './NOAA/RAW-<?PHP echo date('Y-m'); ?>.txt';
 
 $( document ).ready(function() {
 
@@ -19,12 +18,15 @@ $( document ).ready(function() {
 	Dati.UpdateDiv('StationName'); 
 	RotateTo('#WindDir',150);
 	RotateTo('#WindGustDir',190);
-	
-	$('#Temp_Thermometer').TrackingEl('#Temp_Graph',15,-50,InitDivTempGraph);
+
+	InitDivTempGraph(HistMonthData.RawData('HistMeanTemp'),HistMonthData.RawData('HistMaxTemp'),HistMonthData.RawData('HistMinTemp'));
+	$('#Temp_Thermometer').TrackingEl('#Temp_Graph',15,-50);
 	$('#Rain').TrackingEl('#Rain_Graph',-355,-285,InitDivWindGraph);
 	$('#wind_dir_gauge').TrackingEl('#Wind_Graph',15,15,InitDivWindGraph);
-    SetThermometerValue('#Temp_Fill',22.5);
+    	SetThermometerValue('#Temp_Fill',22.5);
 	SetThermometerValue('#App_Temp_Fill',28.5);
+
+	
 	
 	setInterval(function(){
 	RotateTo('#WindDir',Math.floor((Math.random() * 360)));
@@ -37,7 +39,7 @@ $( document ).ready(function() {
 
 <span id="Curr_DT"></span>
 <div id="container">
-
+<div id="pippo"></DIV>
 <div id="wind_dir_gauge">
 
 <img id="WindDir" class="arrow" src="./images/ArrowWind.png">

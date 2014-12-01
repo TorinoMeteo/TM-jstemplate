@@ -1,5 +1,18 @@
 //Movable Div Temperature Graph
-function InitDivTempGraph() {
+function InitDivTempGraph(tmedia_data,tmax_data,tmin_data) {
+	var tmedia = [];
+	for (var i = 0; i < tmedia_data.Data.length; i++){
+	  	tmedia.push([parseInt(tmedia_data.Day[i]),parseFloat(tmedia_data.Data[i])]);
+	}
+	var tmax = [];
+	for (var i = 0; i < tmax_data.Data.length; i++){
+	  	tmax.push([parseInt(tmax_data.Day[i]),parseFloat(tmax_data.Data[i])]);
+	}	
+	var tmin = [];
+	for (var i = 0; i < tmin_data.Data.length; i++){
+	  	tmin.push([parseInt(tmin_data.Day[i]),parseFloat(tmin_data.Data[i])]);
+	}		
+	
         Tempchart = new Highcharts.Chart({
 			chart: {
 					renderTo: 'Temp_Graph',
@@ -10,14 +23,19 @@ function InitDivTempGraph() {
 					zoomType: 'xy',
 					borderWidth: 1
 				},
-            title: {
-                text: 'Monthly Average Temperature'
-            },
-            xAxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            },
-            yAxis: {
+		title: {
+		    text: '',
+		    style: {
+			display: 'none'
+		    }
+		},
+		subtitle: {
+		    text: '',
+		    style: {
+			display: 'none'
+		    }
+		},
+		yAxis: {
                 title: {
                     text: 'Temperature'
                 },
@@ -39,24 +57,18 @@ function InitDivTempGraph() {
                         lineWidth: 1
                     }
                 }
-            }
-			
-			
-			
-			// ,
-            // series: [{
-                // name: 'Tokyo',
-                // data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 20.5, 23.3, 18.3, 13.9, 9.6]
-    
-            // }, {
-                // name: 'London',
-                // data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-            // }]
-			
-			
-			
-			
-			
+            },
+             series: [{
+                name: 'T Media',
+                data: tmedia
+	         },{
+                name: 'T MaX',
+                data: tmax
+	         },{
+                name: 'T MIN',
+                data: tmin
+	         }
+	     		]
         });
    
     }

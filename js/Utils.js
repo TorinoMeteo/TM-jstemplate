@@ -15,7 +15,7 @@
                 el.attr('title', '');
 				func();
             },function(){
-                $(Elem).hide().html('');
+                $(Elem).hide(); //.html('');
                 el.attr('title', ti);
             });
         });

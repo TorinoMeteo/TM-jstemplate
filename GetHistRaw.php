@@ -14,7 +14,7 @@ $RawDataObj = array(
 		);
 
 $output=""; 
-$file = fopen($Path, "r"); 
+$file = fopen($Path, "r") or die("Unable to open File"); 
 
 while(!feof($file)) { 
   $output = $output . fgets($file, 4096); 
