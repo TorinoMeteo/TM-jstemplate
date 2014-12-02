@@ -1,5 +1,5 @@
-01;10,0;10,5;13:21:43;9,6;06:34:45;8,3;0,0;21,6;1;21;05:12:05;299
-02;null;null;null;null;null;null;null;null;null;null;null;null
+01;9,8;10,5;13:21:43;9,0;23:53:07;8,5;0,0;22,8;1;21;05:12:05;290
+02;7,8;9,1;00:01:59;6,4;08:40:19;10,6;0,0;0,3;1;7;03:01:51;271
 03;null;null;null;null;null;null;null;null;null;null;null;null
 04;null;null;null;null;null;null;null;null;null;null;null;null
 05;null;null;null;null;null;null;null;null;null;null;null;null
@@ -30,6 +30,6 @@
 30;null;null;null;null;null;null;null;null;null;null;null;null
 31;null;null;null;null;null;null;null;null;null;null;null;null
 !EOM!
-10,0;10,5;01;9,6;01;8,3;0,0;21,6;1;21;01;299
+9,3;10,5;01;6,4;02;19,0;0,0;23,1;1;21;01;283
 !EOF!
 

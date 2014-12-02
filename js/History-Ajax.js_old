@@ -2,8 +2,7 @@ function DatiStorico(type)
 {
 	this.type = type;
 	this.RawFile = '';
-	this.Path1 = '';
-	this.Path2 = '';
+	this.Path = '';
 	this.RawData = getRawDataStoria;
     	this.UpdateDiv = UpdateDivDataStoria;
 }
@@ -13,7 +12,7 @@ function UpdateDivDataStoria(UsrReq) {
 	    async: true,
         method: 'post',                   
         url : this.RawFile,  
-        data: {'Req': UsrReq, 'Path1': this.Path1, 'Path2': this.Path2},              
+        data: {'Req': UsrReq, 'Path': this.Path},              
         success: function (data)
 		{
 			document.getElementById(UsrReq).innerHTML= data;
@@ -27,7 +26,8 @@ function getRawDataStoria(UsrReq) {
 	    async: false,
         method: 'post',                   
         url : this.RawFile,  
-        data: {'Req': UsrReq, 'Path1': this.Path1, 'Path2': this.Path2},                success: function (data)
+        data: {'Req': UsrReq, 'Path': this.Path},              
+        success: function (data)
 		{
 
 			Output = JSON.parse(data);

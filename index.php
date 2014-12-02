@@ -4,13 +4,21 @@ include_once './include/header.php';
 
 <body>
 <script type="text/javascript">
+
+<?PHP 
+$year = date('Y'); 
+$month = date('m');  
+$lmonth = date('m') - 1; 
+?>
 var Dati = new DatiRealtime('MeteoData');
 Dati.RawFile = './GetRaw.php';
 Dati.Path = 'MeteoData.dat';
 
 var HistMonthData = new DatiStorico('MonthData');
-HistMonthData.RawFile = './GetHistRaw.php';
-HistMonthData.Path = './NOAA/RAW-<?PHP echo date('Y-m'); ?>.txt';
+HistMonthData.RawFile = './Get2MonthRaw.php';
+HistMonthData.Path1 = './NOAA/RAW-<?= $year.'-'.$lmonth ?>.txt'; // month -1
+HistMonthData.Path2 = './NOAA/RAW-<?= $year.'-'.$month ?>.txt'; // this month
+
 
 $( document ).ready(function() {
 
@@ -20,9 +28,10 @@ $( document ).ready(function() {
 	RotateTo('#WindGustDir',190);
 
 	InitDivTempGraph(HistMonthData.RawData('HistMeanTemp'),HistMonthData.RawData('HistMaxTemp'),HistMonthData.RawData('HistMinTemp'));
+	InitDivWindGraph(HistMonthData.RawData('HistAvgWSpeed'),HistMonthData.RawData('HistMaxWSpeed'));
 	$('#Temp_Thermometer').TrackingEl('#Temp_Graph',15,-50);
-	$('#Rain').TrackingEl('#Rain_Graph',-355,-285,InitDivWindGraph);
-	$('#wind_dir_gauge').TrackingEl('#Wind_Graph',15,15,InitDivWindGraph);
+	$('#Rain').TrackingEl('#Rain_Graph',-355,-285);
+	$('#wind_dir_gauge').TrackingEl('#Wind_Graph',15,15);
     	SetThermometerValue('#Temp_Fill',22.5);
 	SetThermometerValue('#App_Temp_Fill',28.5);
 
