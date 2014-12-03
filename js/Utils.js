@@ -13,7 +13,6 @@
            el.hover(function(){
                 $(Elem).fadeTo(300, 1).html( ti );        
                 el.attr('title', '');
-				func();
             },function(){
                 $(Elem).hide(); //.html('');
                 el.attr('title', ti);

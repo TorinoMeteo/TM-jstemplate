@@ -228,6 +228,50 @@ $('#Wind_Graph').highcharts({
 }
 
 //Movable Div Rain Graph
-function InitDivRainGraph() {
-
+function InitDivRainGraph(rainday_data) {
+	var rainday= [];
+	for (var i = (rainday_data.Data.length -30); i < rainday_data.Data.length; i++){
+	  	rainday.push(parseFloat(rainday_data.Data[i]));
+	}
+	$('#Rain_Graph').highcharts({
+		chart: {
+		    type: 'column'
+		},
+		title: {
+		    text: '',
+		    style: {
+			display: 'none'
+		    }
+		},
+		subtitle: {
+		    text: '',
+		    style: {
+			display: 'none'
+		    }
+		},
+		xAxis: {
+                title: {
+                    text: 'last 30 days rain'
+                },
+                labels: {
+                    enabled: false
+                }
+	        },
+		yAxis: {
+		    min: 0,
+		    title: {
+			text: 'Rain (mm)'
+		    }
+		},
+		legend: {
+		    enabled: false
+		},
+		tooltip: {
+		    pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
+		},
+		series: [{
+		    name: 'Population',
+		    data: rainday
+		}]
+    });
 }

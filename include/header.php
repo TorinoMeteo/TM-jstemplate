@@ -9,6 +9,8 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src="http://code.highcharts.com/modules/solid-gauge.js"></script>
 <script type="text/javascript" src="./js/jqxcore.js"></script>
 <script type="text/javascript" src="./js/jqxprogressbar.js"></script>
 <script type="text/javascript" src="./js/jQueryRotate.js"></script>
@@ -16,6 +18,7 @@
 <script type="text/javascript" src="./js/Tm-Ajax.js"></script>
 <script type="text/javascript" src="./js/History-Ajax.js"></script>
 <script type="text/javascript" src="./js/Graphs.js"></script>
+<script type="text/javascript" src="./js/Gauges.js"></script>
 
 <?PHP 
 

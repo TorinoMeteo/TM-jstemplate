@@ -22,24 +22,37 @@ HistMonthData.Path2 = './NOAA/RAW-<?= $year.'-'.$month ?>.txt'; // this month
 
 $( document ).ready(function() {
 
-	Dati.UpdateDiv('Curr_DT'); 
+	Dati.UpdateDiv('Temp'); 
+	SetThermometerValue('#Temp_Fill',Dati.RawData('Temp'));
+	Dati.UpdateDiv('TMax'); 
+	Dati.UpdateDiv('TMin'); 
+
+	Dati.UpdateDiv('DewPoint'); 
+	SetThermometerValue('#Dew_Point_Fill',Dati.RawData('DewPoint'));
+	Dati.UpdateDiv('DPMax'); 
+	Dati.UpdateDiv('DPMin'); 
+	
 	Dati.UpdateDiv('StationName'); 
-	RotateTo('#WindDir',150);
-	RotateTo('#WindGustDir',190);
+
+	Dati.UpdateDiv('WindDir'); 
+	Dati.UpdateDiv('GustDir'); 
+	RotateTo('#WindDirG',Dati.RawData('WindDir'));
+	RotateTo('#WindGustDirG',Dati.RawData('GustDir'));
+	InitWindSpeedGauge(80);//Dati.RawData('Wind')
 
 	InitDivTempGraph(HistMonthData.RawData('HistMeanTemp'),HistMonthData.RawData('HistMaxTemp'),HistMonthData.RawData('HistMinTemp'));
 	InitDivWindGraph(HistMonthData.RawData('HistAvgWSpeed'),HistMonthData.RawData('HistMaxWSpeed'));
+	InitDivRainGraph(HistMonthData.RawData('HistRain'));
 	$('#Temp_Thermometer').TrackingEl('#Temp_Graph',15,-50);
-	$('#Rain').TrackingEl('#Rain_Graph',-355,-285);
+	$('#Rain').TrackingEl('#Rain_Graph',-605,-310);
 	$('#wind_dir_gauge').TrackingEl('#Wind_Graph',15,15);
-    	SetThermometerValue('#Temp_Fill',22.5);
-	SetThermometerValue('#App_Temp_Fill',28.5);
+	
 
 	
 	
 	setInterval(function(){
-	RotateTo('#WindDir',Math.floor((Math.random() * 360)));
-	RotateTo('#WindGustDir',Math.floor((Math.random() * 360)));
+	//RotateTo('#WindDir',Math.floor((Math.random() * 360)));
+	//RotateTo('#WindGustDir',Math.floor((Math.random() * 360)));
 	}, 10000);
 
 });
@@ -51,28 +64,26 @@ $( document ).ready(function() {
 <div id="pippo"></DIV>
 <div id="wind_dir_gauge">
 
-<img id="WindDir" class="arrow" src="./images/ArrowWind.png">
-<img id="WindGustDir" src="./images/ArrowGust.png">
-<div id="WindDir_num">123°</div>
-<div id="GustDir_num">211°</div>
+<img id="WindDirG" class="arrow" src="./images/ArrowWind.png">
+<img id="WindGustDirG" src="./images/ArrowGust.png">
+<div id="WindDir_num">WND:<span id="WindDir">23</span>°</div>
+<div id="GustDir_num">GST:<span id="GustDir">23</span>°</div>
 
 </div>
 <div id="wind_speed_gauge"></div>
-
-
-
-<div id="wind_speed_gauge"></div>
+<div id="wind_gust_gauge"></div>
 
 <div id="Temp_MinMax" class="Square_MinMAx">
+<div class="ValueHeader">Temp.</div>
 <div class="TriangleUp"></div>
-<div id="TMax" class="TValue">55°C</div>
+<div class="TValue"><span id="TMax">55</span>°C</div>
 <div class="TriangleDown"></div>
-<div id="TMin" class="TValue">-55°C</div>
+<div class="TValue"><span id="TMin">-55</span>°C</div>
 </div>
 <div id="Temp_Thermometer" class="Thermometer">
 <div id="Temp_Fill"></div> 
 <img class="Thermoimages" src="./images/ThermoMeter.png">
-<div id="Temp" class="Tempvalue">45°C</div>
+<div class="Tempvalue"><span id="Temp">45</span>°C</div>
 
 <div class="Thick">
 <div class="T10 T">50</div>
@@ -94,16 +105,17 @@ $( document ).ready(function() {
 </div>
 <div id="Webcam"><img height="240" width="320" alt="<?= $webcam_desc;?>" src="<?=$webcam_url ?>"/> </div>
 
-<div id="App_Temp_MinMax" class="Square_MinMAx">
+<div id="Dew_Point_MinMax" class="Square_MinMAx">
+<div class="ValueHeader">Dew P.</div>
 <div class="TriangleUp"></div>
-<div id="AppTMax" class="TValue">55°C</div>
+<div class="TValue"><span id="DPMax">55</span>°C</div>
 <div class="TriangleDown"></div>
-<div id="AppTMin" class="TValue">-55°C</div>
+<div class="TValue"><span id="DPMin">-55</span>°C</div>
 </div>
-<div id="App_Temp_Thermometer" class="Thermometer">
-<div id="App_Temp_Fill"></div> 
+<div id="Dew_Point_Thermometer" class="Thermometer">
+<div id="Dew_Point_Fill"></div> 
 <img class="Thermoimages" src="./images/ThermoMeter.png">
-<div id="AppTemp" class="Tempvalue">45°C</div>
+<div class="Tempvalue"><span id="DewPoint">45</span>°C</div>
 
 <div class="Thick">
 <div class="T10 T">50</div>
@@ -122,8 +134,6 @@ $( document ).ready(function() {
 
 <div id="Pressure_gauge"></div>
 <div id="Humidity_Gauge"></div>
-
-<div id="DP" class="Side_Box"></div>
 
 <div id="Almanac"></div>
 

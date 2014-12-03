@@ -9,7 +9,7 @@ function DatiRealtime(type)
 
 function UpdateDivData(UsrReq) {
       $.ajax({
-	    async: true,
+	    async: false,
         method: 'post',                   
         url : this.RawFile,  
         data: {'Req': UsrReq, 'Path': this.Path},              

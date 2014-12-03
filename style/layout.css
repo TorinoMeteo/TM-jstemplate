@@ -15,13 +15,22 @@
     left: 81px;
 }
 #wind_speed_gauge {
-    background-color: orange;
-    height: 75px;
-    width: 150px;
+    height: 200px;
+    width: 220px;
     position: absolute;
-    top: 200px;
-    left: 81px;
+    top: 165px;
+    left: 46px;
 }
+
+#wind_gust_gauge {
+    background-color: orange;
+    height: 200px;
+    width: 220px;
+    position: absolute;
+    top: 375px;
+    left: 46px;
+}
+
 
 #Temp_MinMax {
     position: absolute;
@@ -69,13 +78,13 @@
     left: 352px;
 }
 
-#App_Temp_MinMax {
+#Dew_Point_MinMax {
     position: absolute;
     top: 4px;
     left: 682px;
 }
 
-#App_Temp_Thermometer {
+#Dew_Point_Thermometer {
     position: absolute;
     top: 58px;
     left: 682px;
@@ -107,8 +116,8 @@
 }
 
 #Wind_Graph {
-    height: 400px;
-    width: 750px;
+    height: 300px;
+    width: 600px;
     position: absolute;
 	display:none;
 	z-index:50;
@@ -116,16 +125,11 @@
 
 #Rain_Graph {
     background-color: orange;
-    height: 270px;
-    width: 340px;
+    height: 300px;
+    width: 600px;
     position: absolute;
 	display:none;
 	z-index:50;
-}
-#DP {
-    position: absolute;
-    top: 304px;
-    left: 41px;
 }
 
 #Almanac {
@@ -133,30 +137,32 @@
     height: 170px;
     width: 440px;
     position: absolute;
-    top: 304px;
+    top: 325px;
     left: 292px;
 }
 
 #rain {
     position: absolute;
-    top: 304px;
+    top: 325px;
     left: 762px;
 }
 
 #WindDir_num {
-    left: 55px;
+    font-size: 10px;
+    left: 45px;
     position: absolute;
     text-align: center;
-    top: 57px;
-    width: 40px;
+    top: 65px;
+    width: 60px;
 }
 
 #GustDir_num {
-    left: 55px;
+    font-size: 10px;
+    left: 45px;
     position: absolute;
     text-align: center;
-    top: 73px;
-    width: 40px;
+    top: 75px;
+    width: 60px;
 }
 
 
@@ -178,22 +184,28 @@ left:0px;
 width: 52px;
 height: 242px;
 }
-
+.ValueHeader{
+    font-size: 9px;
+    height: 15px;
+    text-align: center;
+}
 .TValue {
-    height: 25px;
-    line-height: 25px;
+    height: 15px;
+    line-height: 15px;
     text-align: right;
     width: 50px;
+    font-size: 10px;
 }
 
 .Tempvalue {
-	bottom: 32px;
-    font-size: 13px;
+    bottom: 32px;
+    font-size: 9px;
     left: 0;
     position: relative;
     text-align: center;
     width: 50px;
     z-index: 20;
+    font-weight: bolder;
 }
 
 .Side_Box {
@@ -210,7 +222,7 @@ position:absolute;
 	background: url("../images/MaxT.png") no-repeat;
     height: 10px;
     position: absolute;
-    top: 5px;
+    top: 15px;
     width: 10px;
 }
 .TriangleDown {
